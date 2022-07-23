@@ -1,0 +1,31 @@
+article {
+  max-width: 350px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+article a {
+  text-align: center;
+}
+
+article img {
+  width: 100%;
+}
+
+article .title {
+  margin: 5px 0;
+}
+
+article .info {
+  color: #777;
+}
+
+article a {
+  text-decoration: none;
+  margin-top: 5px;
+  color: #fff;
+  background-color: #04d9ff;
+  justify-self: flex-start;
+}
