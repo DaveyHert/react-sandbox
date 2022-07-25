@@ -4,6 +4,8 @@ header {
   color: #000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 10vh;
+  position: sticky;
+  top: 0;
 }
 
 nav {

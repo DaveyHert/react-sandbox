@@ -1,12 +1,12 @@
 import "./Header.css";
-import Logo from "../assets/react.svg";
+import Logo from "../../assets/react.svg";
 
-export default function App({ title }) {
+export default function Header() {
   return (
     <header>
       <nav>
         <div className='logo'>
-          <span>{title.toUpperCase()}</span>
+          <span>React App</span>
           <img src={Logo} alt='Logo' />
         </div>
 
