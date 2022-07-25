@@ -2,14 +2,15 @@ import Header from "./components/header/Header";
 import Feed from "./components/feed/Feed";
 import Modal from "./components/modal/Modal";
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import AddPost from "./components/add-post/AddPost";
+import useFetchData from "./hooks/useFetchData";
 
 export default function App() {
   const [openModal, setOpenModal] = useState(false);
-
-  //  fetcg data
-
+  const [url, setUrl] = useState("");
+  //  fetch data
+  const [articles, setArticles] = useFetchData(url);
   // delete post
   const handleDelete = (id) => {
     setArticles((prevArticles) => {
@@ -38,6 +39,9 @@ export default function App() {
       )}
 
       <Header />
+      <button onClick={() => setUrl("https://dev.to/api/articles/latest")}>
+        Fetch Data
+      </button>
       <button onClick={() => setOpenModal(true)}>Open Modal</button>
       <Feed posts={articles} delPost={handleDelete} />
     </>
